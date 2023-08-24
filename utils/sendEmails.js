@@ -3,11 +3,13 @@ const nodemailer = require("nodemailer");
 const sendEmail = async (options) => {
   // creating the transporter ( service that will send email like gmail)
   const transporter = nodemailer.createTransport({
-    service:"goDaddy",
-    name: "smtp.office365.com",
-    host: "smtp.office365.com",
+    service: "Outlook365",
+    // name: "smtp.office365.com",
+    // host: "smtp.office365.com",
     port: 587, // if secure true => port = 465 || if secure false => port = 587
     secure: false,
+
+  
     // secureConnection: true,
     auth: {
       user: 'Info@raffles-me.com',
