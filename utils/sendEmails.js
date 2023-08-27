@@ -3,24 +3,16 @@ const nodemailer = require("nodemailer");
 const sendEmail = async (options) => {
   // creating the transporter ( service that will send email like gmail)
   const transporter = nodemailer.createTransport({
-    // service: "goDaddy",
+    service: "goDaddy",
     name: "rafflesksa.com",
     host: "rafflesksa.com",
     port: 465, // if secure true => port = 465 || if secure false => port = 587
     secure: true,
-    secureConnection: false,
-    tls: {
-      ciphers: "SSLv3",
-    },
-    requireTLS: true,
-    port: 465,
-    debug: true,
 
     auth: {
       user: "info@rafflesksa.com",
       pass: "Raffles@2023",
     },
-    // tls: { rejectUnauthorized: false },
   });
 
   // define email options ( from , to , subject , email content )
