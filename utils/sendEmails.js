@@ -5,7 +5,7 @@ const sendEmail = async (options) => {
   const transporter = nodemailer.createTransport({
     service: "goDaddy",
     name: "smtpout.secureserver.net",
-    // host: "smtp.office365.com",
+    host: "smtpout.secureserver.net",
     port: 465, // if secure true => port = 465 || if secure false => port = 587
     secure: true,
 
