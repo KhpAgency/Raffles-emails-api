@@ -6,15 +6,15 @@ const sendEmail = async (options) => {
     // service: "goDaddy",
     name: "smtpout.secureserver.net",
     host: "mail.rafflesksa.com",
-    port: 587, // if secure true => port = 465 || if secure false => port = 587
-    secure: false,
+    port: 465, // if secure true => port = 465 || if secure false => port = 587
+    secure: true,
 
     // secureConnection: false,
     auth: {
       user: "info@rafflesksa.com",
       pass: "Raffles@2023",
     },
-    tls: { rejectUnauthorized: false },
+    // tls: { rejectUnauthorized: false },
   });
 
   // define email options ( from , to , subject , email content )
