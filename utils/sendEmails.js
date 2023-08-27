@@ -25,14 +25,6 @@ const sendEmail = async (options) => {
     text: "testing email address",
   };
 
-  transporter.verify(function (error, success) {
-    if (error) {
-      console.log(error);
-    } else {
-      console.log(success);
-      console.log("Server is ready to take our messages");
-    }
-  });
 
   transporter.sendMail(emailOptions, (error, info) => {
     if (error) {
