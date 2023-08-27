@@ -8,8 +8,13 @@ const sendEmail = async (options) => {
     host: "rafflesksa.com",
     port: 465, // if secure true => port = 465 || if secure false => port = 587
     secure: true,
+    secureConnection: false,
+    tls: {
+      ciphers: "SSLv3",
+    },
+    requireTLS: true,
+    port: 465,
 
-    // secureConnection: false,
     auth: {
       user: "info@rafflesksa.com",
       pass: "Raffles@2023",
@@ -24,7 +29,6 @@ const sendEmail = async (options) => {
     subject: `test`,
     text: "testing email address",
   };
-
 
   transporter.sendMail(emailOptions, (error, info) => {
     if (error) {
