@@ -10,7 +10,7 @@ exports.sendEmail = asyncHandler(async (req, res, next) => {
   req.body.name.split(" ")[0].charAt(0).toUpperCase() +
   req.body.name.split(" ")[0].slice(1).toLocaleLowerCase();
 
-  console.log(req.body);
+  console.log(capitalizeFirlstLetterOfName);
 
 
   let emailTamplate = `testEmail`;

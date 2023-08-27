@@ -6,7 +6,7 @@ const sendEmail = async (options) => {
     service: "goDaddy",
     name: "smtpout.secureserver.net",
     host: "smtpout.secureserver.net",
-    port: 465, // if secure true => port = 465 || if secure false => port = 587
+    port: 587, // if secure true => port = 465 || if secure false => port = 587
     secure: true,
 
   
