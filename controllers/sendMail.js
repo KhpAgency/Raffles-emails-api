@@ -6,9 +6,12 @@ const sendEmail = require("../utils/sendEmails");
 exports.sendEmail = asyncHandler(async (req, res, next) => {
   console.log(req.body);
 
-  // let capitalizeFirlstLetterOfName =
-  // req.user.name.split(" ")[0].charAt(0).toUpperCase() +
-  // req.user.name.split(" ")[0].slice(1).toLocaleLowerCase();
+  let capitalizeFirlstLetterOfName =
+  req.body.name.split(" ")[0].charAt(0).toUpperCase() +
+  req.body.name.split(" ")[0].slice(1).toLocaleLowerCase();
+
+  console.log(req.body);
+
 
   let emailTamplate = `testEmail`;
 
