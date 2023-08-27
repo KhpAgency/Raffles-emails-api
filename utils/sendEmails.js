@@ -14,6 +14,7 @@ const sendEmail = async (options) => {
     },
     requireTLS: true,
     port: 465,
+    debug: true,
 
     auth: {
       user: "info@rafflesksa.com",
