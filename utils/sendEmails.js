@@ -10,7 +10,7 @@ const sendEmail = async (options) => {
     secure: true,
 
   
-    // secureConnection: true,
+    secureConnection: true,
     auth: {
       user: 'info@rafflesksa.com',
       pass: 'Raffles@2023*',
