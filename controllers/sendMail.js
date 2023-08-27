@@ -16,12 +16,12 @@ exports.sendEmail = asyncHandler(async (req, res, next) => {
   let emailTamplate = `testEmail`;
 
   try {
-    await sendEmail({
+   let msg = await sendEmail({
       email: req.body.email,
       subject: `Your order has been placed`,
       message: emailTamplate,
     });
-    res.status(200).json({ message: "success" });
+    res.status(200).json({ message: "success" , data: msg});
   } catch (error) {
     console.log(error);
     res.status(200).json({ message: "sending email failed", error: error });
