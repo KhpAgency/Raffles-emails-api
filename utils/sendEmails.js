@@ -8,6 +8,9 @@ const sendEmail = async (options) => {
     host: "rafflesksa.com",
     port: 465, // if secure true => port = 465 || if secure false => port = 587
     secure: true,
+    tls: {
+      rejectUnauthorized: false,
+    },
 
     auth: {
       user: "info@rafflesksa.com",
