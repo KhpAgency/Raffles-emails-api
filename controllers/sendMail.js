@@ -199,6 +199,6 @@ exports.sendEmail = asyncHandler(async (req, res, next) => {
     res.status(200).json({ message: "success" });
   } catch (error) {
     console.log(error);
-    res.status(200).json({ message: "sending email failed", error: error });
+    res.status(402).json({ message: "sending email failed", error: error });
   }
 });
