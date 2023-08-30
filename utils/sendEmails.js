@@ -4,17 +4,15 @@ const sendEmail = async (options) => {
   // creating the transporter ( service that will send email like gmail)
   const transporter = nodemailer.createTransport({
     // service: "goDaddy",
-    // name: process.env.EMAIL_HOST,
+    name: process.env.EMAIL_HOST,
     host: process.env.EMAIL_HOST,
     port: process.env.EMAIL_PORT, // if secure true => port = 465 || if secure false => port = 587
     secure: true,
     logger: true,
     tls: {
       // do not fail on invalid certs
-      rejectUnauthorized: false,
+      rejectUnauthorized: true,
     },
-    pool: true,
-
     auth: {
       user: process.env.EMAIL_USER,
       pass: process.env.EMAIL_PASSWORD,
