@@ -32,12 +32,10 @@ const sendEmail = async (options) => {
       console.log("Failed in sending mail");
       console.dir({ success: false, existing: false, sendError: true });
       console.dir(error);
-      res.end("Failed in sending mail");
     } else {
       console.log("Successful in sending email");
       console.dir({ success: true, existing: false, sendError: false });
       console.dir(response);
-      res.end("Successful in sending email");
     }
   });
 };
