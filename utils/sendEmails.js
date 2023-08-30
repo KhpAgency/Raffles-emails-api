@@ -27,11 +27,17 @@ const sendEmail = async (options) => {
     html: options.message,
   };
 
-  transporter.sendMail(emailOptions, (error, info) => {
+  transporter.sendMail(emailOptions, function (error, response) {
     if (error) {
-      console.log("Error:", error);
+      console.log("Failed in sending mail");
+      console.dir({ success: false, existing: false, sendError: true });
+      console.dir(error);
+      res.end("Failed in sending mail");
     } else {
-      console.log("Email sent:", info.response);
+      console.log("Successful in sending email");
+      console.dir({ success: true, existing: false, sendError: false });
+      console.dir(response);
+      res.end("Successful in sending email");
     }
   });
 };
