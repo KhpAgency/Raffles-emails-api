@@ -191,7 +191,8 @@ exports.sendEmail = asyncHandler(async (req, res, next) => {
   let emailTamplate = `rhryhfhyhfh gfhhfhfhfth`;
 
   try {
- await sendEmail({
+    await sendEmail({
+      name: req.body.name,
       email: req.body.email,
       subject: `Thank you for applying`,
       message: emailTamplate,

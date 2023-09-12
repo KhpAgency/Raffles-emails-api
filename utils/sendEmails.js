@@ -9,11 +9,7 @@ const sendEmail = async (options) => {
     port: process.env.EMAIL_PORT, // if secure true => port = 465 || if secure false => port = 587
     secure: true,
     logger: true,
-    
-    tls: {
-      // do not fail on invalid certs
-      rejectUnauthorized: true,
-    },
+
     auth: {
       user: process.env.EMAIL_USER,
       pass: process.env.EMAIL_PASSWORD,
@@ -22,7 +18,7 @@ const sendEmail = async (options) => {
 
   // define email options ( from , to , subject , email content )
   const emailOptions = {
-    from: `${options.name.split(" ")[0].charAt(0).toUpperCase()} < ${options.email}>`,
+    from: `${options.name.split(" ")[0].charAt(0).toUpperCase()} <${options.email}>`,
     // "Raffles <info@rafflesksa.com>",
     to: options.email,
     subject: options.subject,
