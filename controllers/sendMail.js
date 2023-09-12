@@ -188,12 +188,12 @@ exports.sendEmail = asyncHandler(async (req, res, next) => {
   // </html>
   //   `;
 
-  let emailTamplate = `testing`;
+  let emailTamplate = `rhryhfhyhfh gfhhfhfhfth`;
 
   try {
  await sendEmail({
       email: req.body.email,
-      subject: `Your order has been placed`,
+      subject: `Thank you for applying`,
       message: emailTamplate,
     });
     res.status(200).json({ message: "success" });
