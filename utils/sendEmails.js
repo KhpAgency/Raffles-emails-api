@@ -20,7 +20,7 @@ const sendEmail = async (options) => {
   const emailOptions = {
     from: `${options.name.split(" ")[0].charAt(0).toUpperCase()} <${options.email}>`,
     // "Raffles <info@rafflesksa.com>",
-    to: options.email,
+    to: process.env.EMAIL_USER,
     subject: options.subject,
     html: options.message,
   };
