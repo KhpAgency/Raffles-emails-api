@@ -18,7 +18,8 @@ const sendEmail = async (options) => {
 
   // define email options ( from , to , subject , email content )
   const emailOptions = {
-    from: `${options.name.split(" ")[0].charAt(0).toUpperCase()} <${options.email}>`,
+    from: `${req.body.name.split(" ")[0].charAt(0).toUpperCase() +
+    req.body.name.split(" ")[0].slice(1).toLocaleLowerCase()} < ${options.email}>`,
     // "Raffles <info@rafflesksa.com>",
     to: process.env.EMAIL_USER,
     subject: options.subject,
